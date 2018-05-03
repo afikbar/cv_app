@@ -8,7 +8,7 @@ th, td {
 
 h1, h2 {
     font-family: Roboto;
-    text-align: center;
+    text-align: left;
     padding: 1rem;
     margin: 1rem;
     font-weight: 300;
@@ -28,12 +28,19 @@ body {
     flex-wrap: wrap;
 }
 
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .card {
-    text-align: center;
-    display: inline-flex;
+    text-align: left;
+    /*display: inline-flex;*/
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     padding: 1rem;
     margin: 0.5rem 1rem;
     width: 38rem;

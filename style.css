@@ -16,6 +16,7 @@ h1, h2 {
 
 h3, h4, h5 {
     margin: 0;
+    margin-bottom: 5px;
 }
 
 body {
@@ -27,7 +28,6 @@ body {
     justify-content: flex-start;
     flex-wrap: wrap;
 }
-
 
 .flex-container {
     display: flex;
@@ -43,6 +43,31 @@ body {
     align-items: left;
     padding: 1rem;
     margin: 0.5rem 1rem;
-    width: 38rem;
+    width: 40rem;
     box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.contact {
+    float: right;
+
+}
+
+.phone, .mail {
+    text-decoration: none;
+    color: #4C4C4C;
+}
+.header{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.me, .edu, .exp, .skill {
+    display: flex;
+    justify-items: flex-start;
+}
+
+.material-icons {
+    position: relative;
+    top: 5px;
+    left: -5px;
 }

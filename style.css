@@ -52,11 +52,13 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-.right-header{
+
+.right-header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .contact {
     display: flex;
     /*float: right;*/
@@ -64,7 +66,7 @@ body {
     justify-content: flex-start;
 }
 
-.bottom-header{
+.bottom-header {
     display: flex;
     flex-direction: column;
 }
@@ -87,16 +89,26 @@ body {
     margin-left: auto;
 }
 
-
-.mail:hover, .phone:hover , .git:hover{
+.mail:hover, .phone:hover, .git:hover {
     width: 100%;
 }
 
-.mail:hover .material-icons, .phone:hover .material-icons, .files:hover .material-icons , .git:hover .material-icons{
+.mail:hover .material-icons, .phone:hover .material-icons, .files:hover .material-icons, .git:hover .material-icons {
     color: #29B6F6;
 }
 
+.cv-body{
+    display: flex;
+    flex-direction: column;
+}
 
+.cv-body h4 {
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+.indent-text {
+    padding-left: +15px;
+}
 .me, .edu, .exp, .skill {
     display: flex;
     justify-items: flex-start;
@@ -108,3 +120,5 @@ body {
     /*transition: 0.5s;*/
     /*left: -5px;*/
 }
+
+

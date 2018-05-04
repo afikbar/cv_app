@@ -60,20 +60,42 @@ body {
     display: flex;
     /*float: right;*/
     flex-direction: column;
-    justify-content: flex-start ;
-
+    justify-content: flex-start;
 }
 
-.phone, .mail {
-    /*flex-direction: row;*/
+.contact .material-icons {
+    color: #4C4C4C;
+    transition: 0.6s;
+}
+
+.link {
     text-decoration: none;
     color: #4C4C4C;
 }
-.header{
+
+.phone, .mail {
+    width: 25px;
+    overflow: hidden;
+    transition: 0.5s;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+
+.mail:hover, .phone:hover {
+    width: 100%;
+}
+
+.mail:hover .material-icons, .phone:hover .material-icons, .files:hover .material-icons {
+    color: #29B6F6;
+}
+
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .me, .edu, .exp, .skill {
     display: flex;
     justify-items: flex-start;
@@ -82,5 +104,6 @@ body {
 .material-icons {
     position: relative;
     top: 5px;
-    left: -5px;
+    /*transition: 0.5s;*/
+    /*left: -5px;*/
 }

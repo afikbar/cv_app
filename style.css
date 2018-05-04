@@ -29,7 +29,7 @@ body {
     flex-wrap: wrap;
 }
 
-.flex-container {
+.flex-container-col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -47,15 +47,16 @@ body {
     box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.15);
 }
 
-.files {
-    /*float: right;*/
-    /*float: bottom;*/
-    margin-top: auto;
-    margin-left: auto;
-    text-decoration: none;
-    color: #4C4C4C;
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
+.right-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .contact {
     display: flex;
     /*float: right;*/
@@ -63,17 +64,22 @@ body {
     justify-content: flex-start;
 }
 
-.contact .material-icons {
+.bottom-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-header .material-icons {
     color: #4C4C4C;
     transition: 0.6s;
 }
 
-.link {
+.right-header .link {
     text-decoration: none;
     color: #4C4C4C;
 }
 
-.phone, .mail {
+.phone, .mail, .git, .files {
     width: 25px;
     overflow: hidden;
     transition: 0.5s;
@@ -82,19 +88,14 @@ body {
 }
 
 
-.mail:hover, .phone:hover {
+.mail:hover, .phone:hover , .git:hover{
     width: 100%;
 }
 
-.mail:hover .material-icons, .phone:hover .material-icons, .files:hover .material-icons {
+.mail:hover .material-icons, .phone:hover .material-icons, .files:hover .material-icons , .git:hover .material-icons{
     color: #29B6F6;
 }
 
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
 .me, .edu, .exp, .skill {
     display: flex;

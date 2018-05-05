@@ -39,12 +39,23 @@ body {
     text-align: left;
     /*display: inline-flex;*/
     flex-direction: column;
-    justify-content: center;
-    align-items: left;
+    justify-content: flex-start;
+    /*align-items: left;*/
     padding: 1rem;
     margin: 0.5rem 1rem;
     width: 40rem;
+    /*min-width: 100%;*/
     box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 60rem){
+    .card {
+        width: 25rem;
+        font-size: 20px;
+        /*max-width: 60%;*/
+        /*color: red;*/
+    }
+
 }
 
 .header {

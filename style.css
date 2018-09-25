@@ -94,7 +94,10 @@ body {
 
 .phone, .mail, .git, .files {
     width: 25px;
-    overflow: hidden;
+    height: 30px;
+    /*overflow-y: visible;*/
+    overflow-x: hidden;
+    text-align: center;
     transition: 0.5s;
     white-space: nowrap;
     margin-left: auto;
@@ -127,7 +130,9 @@ body {
 
 .material-icons {
     position: relative;
+    /*padding-top: 5px;*/
     top: 5px;
+
     /*transition: 0.5s;*/
     /*left: -5px;*/
 }

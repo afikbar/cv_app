@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47953793-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-47953793-2');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+        integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Afik Bar</title>
+</head>
+
+<body>
+    <div class="flex-container-col">
+        <div class="card header">
+            <h1 style="float: left">Afik Bar</h1>
+            <div class="right-header">
+                <div class="contact">
+                    <div class="mail">
+                        <i class="material-icons">email</i>
+                        <a href="mailto:jobs@afikbar.com" class="link">jobs@afikbar.com</a>
+                    </div>
+                    <div class="phone">
+                        <i class="material-icons">call</i>
+                        <a href="tel:+972-52-2000126" class="link">+972-52-2000126</a>
+                    </div>
+                </div>
+                <div class="bottom-header">
+                    <div class="git">
+                        <i class="material-icons fab fa-github"></i>
+                        <a href="https://github.com/afikbar" target="_blank" class="link">GitHub</a>
+                    </div>
+                    <div class="files">
+                        <a href="{{ url_for('static', filename='files/Afik CV.pdf') }}" target="_blank"
+                            class="material-icons far fa-file-pdf"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cv-body">
+            <div class="card me">
+                <h3 style="font-weight: bold"><i class="material-icons" style="color: #00ab44">android</i> ME</h3>
+                <small class="indent-text">Efficient, autodidact, curious hard worker.</small>
+            </div>
+            <div class="card edu">
+                <h3 style="font-weight: bold;"><i class="material-icons" style="color: #00ab44">school</i> EDUCATION
+                </h3>
+                <div class="flex-container-col">
+                    <h4>
+                        <b>Technion</b>
+                        <span style="color: #4C4C4C"> | Data Science and Engineering</span>
+                    </h4>
+                    <div class="indent-text flex-container-col">
+                        <span>2016 – 2020</span>
+                        <small class="indent-text">Graduated with honors (GPA 87).</small>
+                    </div>
+                </div>
+                <div class="flex-container-col">
+                    <h4>
+                        <b>University of Toronto</b>
+                        <span style="color: #4C4C4C"> | Student Exchange Program</span>
+                    </h4>
+                    <div class="indent-text flex-container-col">
+                        <span>2018 – 2019</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card exp">
+                <h3 style="font-weight: bold"><i class="material-icons" style="color: #00ab44">card_travel</i>
+                    EXPERIENCE
+                </h3>
+                <h4>
+                    <b>Micro Focus</b>
+                    <span style="color: #4C4C4C"> | Software Engineer</span>
+                </h4>
+                <div class="indent-text flex-container-col">
+                    <span>2018 – 2021</span>
+                    <small class="indent-text">
+                        Developed a new data-driven system, focused on ETL from custom sensors and Reporting.
+                    </small>
+                </div>
+                <h4>
+                    <b>Ministry of Defense</b>
+                    <span style="color: #4C4C4C"> | GIS Analyst</span>
+                </h4>
+                <div class="indent-text flex-container-col">
+                    <span>2016 – 2018</span>
+                    <small class="indent-text">Performed alpha-numeric analysis, geographical analysis, and GIS Data
+                        verification. <br>
+                        Created in-house analysis & verification tools in Python.
+                    </small>
+                </div>
+                <h4>
+                    <b>IDF - Combat Engineering Corps</b>
+                    <span style="color: #4C4C4C"> | GIS Specialist</span>
+                </h4>
+                <div class="indent-text flex-container-col">
+                    <span> 2012 - 2015</span>
+                    <small class="indent-text">Led every aspect of GIS within the corps, including data collection,
+                        verification, and implementation.<br>
+                        Analyzed Geo-data, using ESRI software.
+                    </small>
+                </div>
+                <h4>
+                    <b>DONATELO Promotional Display LTD</b>
+                    <span style="color: #4C4C4C"> | System & Website Administrator</span>
+                </h4>
+                <div class="indent-text flex-container-col">
+                    <span>2010 – 2012</span>
+                    <small class="indent-text">Managed the company's e-commerce website and inventory - using SBO.<br>
+                        IT and DevOps.
+                    </small>
+                </div>
+            </div>
+            <div class="card skill">
+                <h3 style="font-weight: bold"><i class="material-icons" style="color: #00ab44">explore</i> SKILLS</h3>
+                <table>
+                    <tr>
+                        <td align="left">
+                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
+                                Python, C++, C#, JavaScript, SQL.
+                            </small>
+                        </td>
+                        <td align="left">
+                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
+                                Machine Learning
+                            </small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
+                                .Net, Angular, Spark.
+                            </small>
+                        </td>
+                        <td align="left">
+                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
+                                Fast learner
+                            </small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
+                                Matlab, R.
+                            </small>
+                        </td>
+                        <td align="left">
+                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
+                                holds Top-Secret security clearance.
+                            </small>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

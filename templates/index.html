@@ -26,6 +26,7 @@
         integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <title>Afik Bar</title>
+    {% import 'macros.html' as macros %}
 </head>
 
 <body>
@@ -63,120 +64,26 @@
             </div>
         </div>
         <div class="cv-body">
-            <div class="card me">
-                <h3 style="font-weight: bold"><i class="material-icons" style="color: #00ab44">android</i> ME</h3>
-                <small class="indent-text">Efficient, autodidact, curious hard worker.</small>
-            </div>
-            <div class="card edu">
-                <h3 style="font-weight: bold;"><i class="material-icons" style="color: #00ab44">school</i> EDUCATION
-                </h3>
-                <div class="flex-container-col">
-                    <h4>
-                        <b>Technion</b>
-                        <span style="color: #4C4C4C"> | Data Science and Engineering</span>
-                        <span style="float: right; color:#4C4C4C; font-size: small">2016 – 2020</span>
-                    </h4>
-                    <div class="indent-text flex-container-col">
-                        <small class="indent-text">Graduated with honors (GPA 87).</small>
-                    </div>
-                </div>
-                <div class="flex-container-col">
-                    <h4>
-                        <b>University of Toronto</b>
-                        <span style="color: #4C4C4C"> | Student Exchange Program</span>
-                        <span style="float: right; color:#4C4C4C; font-size: small">2018 – 2019</span>
-                    </h4>
-                </div>
-            </div>
-            <div class="card exp">
-                <h3 style="font-weight: bold"><i class="material-icons" style="color: #00ab44">card_travel</i>
-                    EXPERIENCE
-                </h3>
-                <h4>
-                    <b>Micro Focus</b>
-                    <span style="color: #4C4C4C"> | Software Engineer</span>
-                    <span style="float: right; color:#4C4C4C; font-size: small">2018 – 2021</span>
-                </h4>
-                <div class="indent-text flex-container-col">
-                    <small class="indent-text">
-                        Developed a new data-driven system, focused on ETL from custom sensors and Reporting.
-                    </small>
-                </div>
-                <h4>
-                    <b>Ministry of Defense</b>
-                    <span style="color: #4C4C4C"> | GIS Analyst</span>
-                    <span style="float: right; color:#4C4C4C; font-size: small">2016 – 2018</span>
-                </h4>
-                <div class="indent-text flex-container-col">
-                    <small class="indent-text">
-                        Performed alpha-numeric analysis, geographical analysis, and GIS Data verification. <br>
-                        Created in-house analysis & verification tools in Python.
-                    </small>
-                </div>
-                <h4>
-                    <b>IDF - Combat Engineering Corps</b>
-                    <span style="color: #4C4C4C"> | GIS Specialist</span>
-                    <span style="float: right; color:#4C4C4C; font-size: small">2012 – 2015</span>
-                </h4>
-                <div class="indent-text flex-container-col">
-                    <small class="indent-text">Led every aspect of GIS within the corps, including data collection,
-                        verification, and implementation.<br>
-                        Analyzed Geo-data, using ESRI software.
-                    </small>
-                </div>
-                <h4>
-                    <b>DONATELO Promotional Display LTD</b>
-                    <span style="color: #4C4C4C"> | System & Website Administrator</span>
-                    <span style="float: right; color:#4C4C4C; font-size: small">2010 – 2012</span>
-                </h4>
-                <div class="indent-text flex-container-col">
-                    <small class="indent-text">Managed the company's e-commerce website and inventory - using SBO.<br>
-                        IT and DevOps.
-                    </small>
-                </div>
-            </div>
-            <div class="card skill">
-                <h3 style="font-weight: bold"><i class="material-icons" style="color: #00ab44">explore</i> SKILLS</h3>
-                <table>
-                    <tr>
-                        <td align="left">
-                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
-                                Python, C++, C#, JavaScript, SQL.
-                            </small>
-                        </td>
-                        <td align="left">
-                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
-                                Machine Learning
-                            </small>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left">
-                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
-                                .Net, Angular, Spark.
-                            </small>
-                        </td>
-                        <td align="left">
-                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
-                                Fast learner
-                            </small>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left">
-                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
-                                Matlab, R.
-                            </small>
-                        </td>
-                        <td align="left">
-                            <small><i class="material-icons" style="color: #00ab44;font-size: small;">bubble_chart</i>
-                                holds Top-Secret security clearance.
-                            </small>
-                        </td>
-                    </tr>
+            {% call macros.card(name='me', title='ME', title_icon='android') %}
+                <span>{{ cards.me }}</span>
+            {% endcall %}
+            {% call macros.card(name='exp', title='EXPERIENCE', title_icon='card_travel') %}
+                {% for job in cards.experince %}
+                    {{ macros.job(**job) }}
+                {% endfor %}
+            {% endcall %}
+            {% call macros.card(name='edu', title='EDUCATION', title_icon='school') %}
+                {% for school in cards.education %}
+                        {{ macros.school(**school) }}
+                {% endfor %}
+            {% endcall %}
+            {% call macros.card(name='skill', title='SKILLS', title_icon='explore') %}
+                <table style="width: 100%">
+                    {% for skill in cards.skills %}
+                        {{ macros.skill(skill) }}
+                    {% endfor %}
                 </table>
-
-            </div>
+            {% endcall %}
         </div>
     </div>
 

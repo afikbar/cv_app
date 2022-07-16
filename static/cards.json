@@ -1,0 +1,69 @@
+{
+    "me": "Problem solver, autodidact, curious hard worker.",
+    "education": [
+        {
+            "school": "Technion",
+            "program": "B.Sc. Data Science and Engineering",
+            "date": "2016 - 2020",
+            "description": "Graduated with honors (GPA 87)."
+        },
+        {
+            "school": "University of Toronto",
+            "program": "Student Exchange Program",
+            "date": "2018",
+            "description": ""
+        }
+    ],
+    "experince": [
+        {
+            "company": "Pecan AI",
+            "title": "Machine Learning Engineer",
+            "date": "2022 - PRESENT",
+            "description": ""
+        },
+        {
+            "company": "BeyondMinds",
+            "title": "Machine Learning Engineer",
+            "date": "2022 - 2022",
+            "description": "In charge of engineering research algorithms into production, upon all its aspects; consistency, scale, and optimizations. Built SDKs for Vision, NLP & Tabular researchers."
+        },
+        {
+            "company": "Optimove",
+            "title": "Data & Machine Learning Engineer",
+            "date": "2021 - 2022",
+            "description": "Part of R&D Data Lab. Design and implement scalable data services into production. <br>Build Machine learning infrastructure and pipelines from scratch."
+        },
+        {
+            "company": "Technion",
+            "title": "Teaching Assistant",
+            "date": "2020 - 2022",
+            "description": "Distributed Databases, Data Gathering Lab."
+        },
+        {
+            "company": "Micro Focus",
+            "title": "Software Engineer",
+            "date": "2018 - 2021",
+            "description": "Developed a new data-driven system, focused on ETL from custom sensors and Reporting."
+        },
+        {
+            "company": "Ministry of Defense",
+            "title": "GIS Analyst",
+            "date": "2016 - 2018",
+            "description": "Performed spatial data analysis and verification using Python."
+        }
+    ],
+    "skills": [
+        [
+            "Python, C#, Java, C++",
+            "Kubernetes, Airflow"
+        ],
+        [
+            "Machine & Deep Learning",
+            "Spark, PyTorch, .Net"
+        ],
+        [
+            "SQL & NoSQL Modeling",
+            "Elastic, Snowflake"
+        ]
+    ]
+}

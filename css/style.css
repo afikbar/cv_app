@@ -1,0 +1,299 @@
+:root {
+  --accent: #00ab44;
+  --text: #333;
+  --text-muted: #4c4c4c;
+  --bg: #f5f5f5;
+  --card-bg: #fff;
+  --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  --card-radius: 6px;
+  --font: 'Roboto', sans-serif;
+  --max-width: 44rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Page layout ---- */
+
+.page {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ---- Card ---- */
+
+.cv-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.25rem 1.5rem;
+}
+
+/* ---- Header ---- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-name {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.header-tagline {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-top: 0.15rem;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* ---- Contact links ---- */
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.contact-item i {
+  font-size: 1rem;
+  flex-shrink: 0;
+  width: 1.2rem;
+  text-align: center;
+}
+
+.contact-item:hover {
+  color: var(--accent);
+}
+
+
+/* ---- Section titles ---- */
+
+.section-title {
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.section-icon {
+  color: var(--accent);
+  font-size: 1.25rem;
+}
+
+.section-content {
+  padding-left: 1rem;
+}
+
+/* ---- Entries (experience / education) ---- */
+
+.entry {
+  margin-bottom: 0.35rem;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.entry-subtitle {
+  color: var(--text-muted);
+}
+
+.entry-date {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.entry-description {
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+/* ---- Skills table ---- */
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.skills-table td {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.skill-icon {
+  color: var(--accent);
+  font-size: 1.1rem;
+  vertical-align: middle;
+  margin-right: 0.2rem;
+}
+
+/* ---- Responsive ---- */
+
+@media screen and (max-width: 600px) {
+  .page {
+    padding: 0.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .contact-links {
+    align-items: flex-start;
+  }
+
+  .contact-item {
+    flex-direction: row;
+  }
+
+  .entry-header {
+    flex-direction: column;
+  }
+
+  .entry-date {
+    font-size: 0.75rem;
+  }
+
+  .skills-table td {
+    display: block;
+    padding: 0.25rem 0.6rem;
+  }
+}
+
+/* ---- Print / PDF ---- */
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: #fff;
+    min-height: auto;
+  }
+
+  .page {
+    max-width: 100%;
+    padding: 0;
+    gap: 0;
+  }
+
+  .cv-body {
+    gap: 0;
+  }
+
+  .card {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0.6rem 0;
+    break-inside: avoid;
+  }
+
+  .header {
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-item[title="Download CV"] {
+    display: none;
+  }
+
+  .contact-item {
+    color: var(--text-muted);
+  }
+
+  .section-title {
+    margin-bottom: 0.3rem;
+  }
+
+  .entry {
+    margin-bottom: 0.2rem;
+  }
+
+  .section-content {
+    padding-left: 0.75rem;
+  }
+
+  .skills-table td {
+    padding: 0.2rem 0.6rem;
+  }
+}

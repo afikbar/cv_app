@@ -1,8 +1,5 @@
-
-gwd_preview_index/
-
-\.idea/
-
-__pycache__/app.cpython-38.pyc
-
-static/.DS_Store
+.DS_Store
+.idea/
+.vscode/
+node_modules/
+assets/files/Afik_CV.pdf

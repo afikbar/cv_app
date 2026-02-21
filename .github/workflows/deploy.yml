@@ -33,15 +33,23 @@ jobs:
         run: npm ci
 
       - name: Generate CV PDF
-        run: npm run generate-pdf
+        run: |
+          npm run generate-pdf
+          echo "PDF generated:"
+          ls -la assets/files/Afik_CV.pdf
 
       - name: Assemble deploy directory
         run: |
-          mkdir _site
+          mkdir -p _site/assets/files
           cp index.html data.json robots.txt sitemap.xml CNAME _site/
-          cp -r css js assets _site/
-          echo "--- Deployed files ---"
+          cp -r css js _site/
+          cp assets/favicon.ico _site/assets/
+          cp assets/files/Afik_CV.pdf _site/assets/files/
+          touch _site/.nojekyll
+          echo "=== Files to deploy ==="
           find _site -type f | sort
+          echo "=== PDF check ==="
+          ls -la _site/assets/files/Afik_CV.pdf
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

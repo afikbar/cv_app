@@ -35,11 +35,13 @@ jobs:
       - name: Generate CV PDF
         run: npm run generate-pdf
 
-      - name: Verify PDF was generated
-        run: test -f assets/files/Afik_CV.pdf && echo "PDF exists ($(du -h assets/files/Afik_CV.pdf | cut -f1))" || (echo "PDF generation failed!" && exit 1)
-
-      - name: Clean up build dependencies
-        run: rm -rf node_modules
+      - name: Assemble deploy directory
+        run: |
+          mkdir _site
+          cp index.html data.json robots.txt sitemap.xml CNAME _site/
+          cp -r css js assets _site/
+          echo "--- Deployed files ---"
+          find _site -type f | sort
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -47,7 +49,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment

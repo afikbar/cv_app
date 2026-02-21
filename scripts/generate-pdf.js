@@ -4,7 +4,7 @@ const path = require('path');
 const puppeteer = require('puppeteer');
 
 const ROOT = path.resolve(__dirname, '..');
-const OUT = path.join(ROOT, 'assets', 'files', 'Afik_CV.pdf');
+const OUT = path.join(ROOT, 'cv.pdf');
 
 const MIME = {
   '.html': 'text/html',

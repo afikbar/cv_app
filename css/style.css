@@ -241,7 +241,6 @@ body {
 
 @page {
   size: A4;
-  margin: 0;
 }
 
 @media print {
@@ -252,25 +251,24 @@ body {
 
   .page {
     max-width: 100%;
-    padding: 0;
-    gap: 0;
+    padding: 0.5rem 0;
+    gap: 0.15rem;
   }
 
   .cv-body {
-    gap: 0;
+    gap: 0.15rem;
   }
 
   .card {
     box-shadow: none;
     border-radius: 0;
-    padding: 0.6rem 0;
+    padding: 0.5rem 0.25rem;
     break-inside: avoid;
   }
 
   .header {
-    padding-bottom: 0.4rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 0.2rem;
   }
 
   .contact-item[title="Download CV"] {
@@ -286,7 +284,7 @@ body {
   }
 
   .entry {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.25rem;
   }
 
   .section-content {
@@ -294,6 +292,6 @@ body {
   }
 
   .skills-table td {
-    padding: 0.2rem 0.6rem;
+    padding: 0.25rem 0.6rem;
   }
 }

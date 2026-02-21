@@ -35,6 +35,12 @@ jobs:
       - name: Generate CV PDF
         run: npm run generate-pdf
 
+      - name: Verify PDF was generated
+        run: test -f assets/files/Afik_CV.pdf && echo "PDF exists ($(du -h assets/files/Afik_CV.pdf | cut -f1))" || (echo "PDF generation failed!" && exit 1)
+
+      - name: Clean up build dependencies
+        run: rm -rf node_modules
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 

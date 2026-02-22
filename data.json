@@ -12,7 +12,7 @@
   "experience": [
     {
       "company": "Pecan AI",
-      "title": "Machine Learning Engineer",
+      "title": "Machine Learning Engineer Team Lead",
       "date": "2022 - Present",
       "description": ""
     },
@@ -20,13 +20,13 @@
       "company": "BeyondMinds",
       "title": "Machine Learning Engineer",
       "date": "2022",
-      "description": "In charge of engineering research algorithms into production, upon all its aspects; consistency, scale, and optimizations. Built SDKs for Vision, NLP & Tabular researchers."
+      "description": "Productionized research algorithms, focusing on consistency, scale, and optimizations. Developed SDKs for Vision, NLP, and Tabular researchers."
     },
     {
       "company": "Optimove",
       "title": "Data & Machine Learning Engineer",
       "date": "2021 - 2022",
-      "description": "Part of R&D Data Lab. Design and implement scalable data services into production.\nBuild Machine learning infrastructure and pipelines from scratch."
+      "description": "R&D Data Lab member. Designed and implemented scalable data services in production. Built ML infrastructure and pipelines from scratch."
     },
     {
       "company": "Technion",
@@ -38,7 +38,7 @@
       "company": "Micro Focus",
       "title": "Software Engineer",
       "date": "2018 - 2021",
-      "description": "Developed a new data-driven system, focused on ETL from custom sensors and Reporting."
+      "description": "Developed a new ETL and reporting system using custom sensor data."
     },
     {
       "company": "Ministry of Defense",
@@ -62,8 +62,8 @@
     }
   ],
   "skills": [
-    ["Python, C#, Java, C++", "Kubernetes, Airflow"],
-    ["Machine & Deep Learning", "Spark, PyTorch, .Net"],
+    ["Python, C#, Java", "Kubernetes, Airflow"],
+    ["Machine & Deep Learning", "Spark, PyTorch"],
     ["SQL & NoSQL Modeling", "Elastic, Snowflake"]
   ]
 }

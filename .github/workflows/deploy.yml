@@ -38,7 +38,7 @@ jobs:
       - name: Assemble deploy directory
         run: |
           mkdir _site
-          cp index.html data.json robots.txt sitemap.xml CNAME cv.pdf _site/
+          cp index.html data.json robots.txt sitemap.xml CNAME _site/
           cp -r css js assets _site/
           touch _site/.nojekyll
           echo "=== Files to deploy ==="

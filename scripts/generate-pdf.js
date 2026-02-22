@@ -37,16 +37,34 @@ function serve() {
   });
 }
 
+function findSystemChrome() {
+  const candidates = [
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/chromium-browser',
+  ];
+  return candidates.find((p) => fs.existsSync(p));
+}
+
 async function main() {
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
 
   const { server, port } = await serve();
   console.log(`Serving on port ${port}`);
 
-  const browser = await puppeteer.launch({
+  const launchOptions = {
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
+  };
+
+  const systemChrome = findSystemChrome();
+  if (systemChrome) {
+    console.log(`Using system Chrome: ${systemChrome}`);
+    launchOptions.executablePath = systemChrome;
+  }
+
+  const browser = await puppeteer.launch(launchOptions);
 
   const page = await browser.newPage();
   await page.goto(`http://localhost:${port}`, { waitUntil: 'networkidle0' });
